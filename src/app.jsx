@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+import { reducer as formReducer } from 'redux-form'
+
+import FirstForm from './forms/first_form.jsx';
 
 function testReducer(state = {}, action) {
   switch (action.type) {
@@ -12,7 +15,8 @@ function testReducer(state = {}, action) {
 }
 
 const rootReducer = combineReducers({
-    testReducerStore: testReducer
+    testReducerStore: testReducer,
+    form: formReducer
 });
 
 const store = createStore(
@@ -35,6 +39,8 @@ class App extends Component {
             <Provider store={store}>
                 <h1>My React App!</h1>
                 <button onClick={ () => { this.buttonHandler(store) } } >test</button>
+                <hr/>
+                <FirstForm/>
             </Provider>
         );
     }
