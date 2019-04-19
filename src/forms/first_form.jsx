@@ -60,7 +60,7 @@ class FirstForm extends Component {
                     GET https://jsonplaceholder.typicode.com/posts
                 </p>
                 <fieldset disabled={ submitting }>
-                    <legend>FirstForm</legend>
+                    <legend>First Form</legend>
                     <form
                         action='https://jsonplaceholder.typicode.com/posts'
                         method='GET'

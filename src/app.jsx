@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { reducer as formReducer } from 'redux-form'
 
 import FirstForm from './forms/first_form.jsx';
+import SecondForm from './forms/second_form.jsx';
 
 function testReducer(state = {}, action) {
   switch (action.type) {
@@ -37,10 +38,15 @@ class App extends Component {
     render() {
         return (
             <Provider store={store}>
-                <h1>My React App!</h1>
-                <button onClick={ () => { this.buttonHandler(store) } } >test</button>
+                <h1>
+                    My React App!
+                </h1>
+                <button onClick={ () => { this.buttonHandler(store) } } >
+                    test
+                </button>
                 <hr/>
-                <FirstForm/>
+                <FirstForm />
+                <SecondForm />
             </Provider>
         );
     }
