@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import { reducer as formReducer } from 'redux-form'
+import { reducer as formReducer } from 'redux-form';
 
-import FirstForm from './forms/first_form.jsx';
-import SecondForm from './forms/second_form.jsx';
+import { BrowserRouter } from "react-router-dom";
 
-function testReducer(state = {}, action) {
-  switch (action.type) {
-    case 'TEST_ACTION':
-      return Object.assign({}, state, action.payload);
-    default:
-      return state;
-  }
-}
+import Navigation from './components/navigation.jsx';
+import Main from './components/main.jsx';
+
+import './styles/global.scss';
 
 const rootReducer = combineReducers({
-    testReducerStore: testReducer,
     form: formReducer
 });
 
@@ -26,28 +20,14 @@ const store = createStore(
 );
 
 class App extends Component {
-    buttonHandler = (store) => {
-        store.dispatch({
-            type: 'TEST_ACTION',
-            payload: {
-                text: 'test action ' + Math.random() 
-            }
-        })
-    }
-
     render() {
         return (
-            <Provider store={store}>
-                <h1>
-                    My React App!
-                </h1>
-                <button onClick={ () => { this.buttonHandler(store) } } >
-                    test
-                </button>
-                <hr/>
-                <FirstForm />
-                <SecondForm />
-            </Provider>
+            <BrowserRouter>
+                <Provider store={store}>
+                    <Navigation />
+                    <Main />
+                </Provider>
+            </BrowserRouter>
         );
     }
 }

@@ -2,12 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/index.jsx',
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: 'index.js',
-        publicPath: '/'
+        publicPath: './'
     },
     module: {
         rules: [

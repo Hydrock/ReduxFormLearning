@@ -55,7 +55,7 @@ class FirstForm extends Component {
     render() {
         const { handleSubmit, submitting } = this.props;
         return (
-            <div>
+            <div className='example-container'>
                 <p>
                     GET https://jsonplaceholder.typicode.com/posts
                 </p>

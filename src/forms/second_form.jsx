@@ -10,7 +10,7 @@ class SecondForm extends Component {
         const { handleSubmit, submitting } = this.props;
 
         return (
-            <fieldset disabled={submitting}>
+            <fieldset disabled={submitting} className='example-container'>
                 <legend>
                     Second Form
                 </legend>
