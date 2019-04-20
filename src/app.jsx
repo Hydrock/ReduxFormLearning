@@ -3,7 +3,7 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { reducer as formReducer } from 'redux-form';
 
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import Navigation from './components/navigation.jsx';
 import Main from './components/main.jsx';
@@ -22,12 +22,12 @@ const store = createStore(
 class App extends Component {
     render() {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <Provider store={store}>
                     <Navigation />
                     <Main />
                 </Provider>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }
