@@ -5,7 +5,7 @@ module.exports = {
     mode: 'production',
     entry: './src/index.jsx',
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "docs"),
         filename: 'index.js',
         publicPath: './'
     },
@@ -25,14 +25,6 @@ module.exports = {
                 use:['style-loader','css-loader', 'sass-loader']
             }
         ]
-    },
-    devServer: {
-        contentBase: path.join(__dirname, './dist'),
-        compress: true,
-        port: 8080,
-        hot: true,
-        open: true,
-        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({
