@@ -27,11 +27,11 @@ body {
     height: 100vh;
     padding: 20px;
 
-    ul {
+    .navigation {
         padding-left: 0;
         list-style: none;
 
-        li {
+        &__item {
             margin-bottom: 10px;
         }
     }
@@ -75,4 +75,10 @@ main {
 form {
     padding: 10px;
     border: 1px dashed;
+}
+
+@media (max-width: 800px) {
+    #app {
+        flex-direction: column;
+    }
 }

@@ -34,6 +34,9 @@ class Example_1 extends Component {
                         Именно поэтому мы вызваем фунцию handleSubmit (которая пришла в props из HOC redux form), и пробрасываем туда нашу кастомную 
                         функцию сабмита. На что handleSubmit возвращает функию которая при сабмите оповестит store о изменениях в форме и вызовет наш кастомный сабмит.<br/><br/>
                     </li>
+                    <li>
+                        В качестве поля выступает компонент Field
+                    </li>
                 </ol>
                 <Form />
                 <CodeHighlighter code={ codeInline } />

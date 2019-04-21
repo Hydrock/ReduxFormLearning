@@ -9,15 +9,20 @@ class Navigation extends Component {
                     Examples
                 </span>
                 <nav>
-                    <ul>
-                        <li>
+                    <ul className='navigation'>
+                        <li className='navigation__item'>
                             <Link to="/example_1/">
-                                Simblest Form
+                                Simple Form (Part 1)
                             </Link>
                         </li>
-                        <li>
+                        <li className='navigation__item'>
                             <Link to="/example_2/">
-                                Simblest Form 2
+                                Simple Form (Part 2)
+                            </Link>
+                        </li>
+                        <li className='navigation__item'>
+                            <Link to="/example_3/">
+                                Simple Form (Part 3)
                             </Link>
                         </li>
                     </ul>
