@@ -23,8 +23,24 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use:['style-loader','css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {},
+                    },
+                ]
             }
         ]
+    },
+    resolve: {
+        alias: {
+            Templates: path.resolve(__dirname, 'src/templates/'),
+            Src: path.resolve(__dirname, 'src/'),
+            Components: path.resolve(__dirname, 'src/components/')
+        }
     },
     devServer: {
         contentBase: path.join(__dirname, './dist'),
@@ -36,7 +52,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "src/template/index.html")
+            template: path.resolve(__dirname, "src/templates/index.html")
         })
     ]
 }

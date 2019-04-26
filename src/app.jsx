@@ -5,8 +5,8 @@ import { reducer as formReducer } from 'redux-form';
 
 import { HashRouter } from "react-router-dom";
 
-import Navigation from './components/navigation.jsx';
-import Main from './components/main.jsx';
+import Navigation from 'Components/navigation.jsx';
+import Main from 'Components/main.jsx';
 
 import './styles/global.scss';
 
