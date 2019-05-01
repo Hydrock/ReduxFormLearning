@@ -33,6 +33,11 @@ class Navigation extends Component {
                                 Fields
                             </Link>
                         </li>
+                        <li className='navigation__item'>
+                            <Link to="/example_5/">
+                                Form in Form
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
