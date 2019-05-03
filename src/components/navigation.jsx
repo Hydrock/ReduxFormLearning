@@ -3,7 +3,56 @@ import { Link } from "react-router-dom";
 
 import Image from '../static/rf.png';
 
+const navItems = [
+    {
+        path: '/example_1/',
+        text: 'Simple Form (Part 1)'
+    },
+    {
+        path: '/example_2/',
+        text: 'Simple Form (Part 2)'
+    },
+    {
+        path: '/example_3/',
+        text: 'Simple Form (Part 3)'
+    },
+    {
+        path: '/example_4/',
+        text: 'Fields'
+    },
+    {
+        path: '/example_5/',
+        text: 'Form in For'
+    },
+    {
+        path: '/example_6/',
+        text: 'Async Form Validation'
+    },
+]
+
 class Navigation extends Component {
+    renderListItem = (navItems) => {
+        return navItems.map(({ path, text }) => {
+            return (
+                <li className='navigation__item'>
+                    <Link to={ path }>
+                        { text }
+                    </Link>
+                </li>
+            );
+        });
+    }
+
+    renderNavigation = () => {
+        return (
+            <nav>
+                <ul className='navigation'>
+                    { this.renderListItem(navItems) }
+                </ul>
+            </nav>
+        );
+    }
+
     render() {
         return (
             <div className='navigaion-container'>
@@ -11,35 +60,7 @@ class Navigation extends Component {
                 <span className='navigation-label'>
                     Examples
                 </span>
-                <nav>
-                    <ul className='navigation'>
-                        <li className='navigation__item'>
-                            <Link to="/example_1/">
-                                Simple Form (Part 1)
-                            </Link>
-                        </li>
-                        <li className='navigation__item'>
-                            <Link to="/example_2/">
-                                Simple Form (Part 2)
-                            </Link>
-                        </li>
-                        <li className='navigation__item'>
-                            <Link to="/example_3/">
-                                Simple Form (Part 3)
-                            </Link>
-                        </li>
-                        <li className='navigation__item'>
-                            <Link to="/example_4/">
-                                Fields
-                            </Link>
-                        </li>
-                        <li className='navigation__item'>
-                            <Link to="/example_5/">
-                                Form in Form
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
+                { this.renderNavigation() }
             </div>
         )
     }

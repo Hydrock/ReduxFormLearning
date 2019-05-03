@@ -6,6 +6,7 @@ import Example_2 from '../forms/example_2/example_2.jsx';
 import Example_3 from '../forms/example_3/example_3.jsx';
 import Example_4 from '../forms/example_4/example_4.jsx';
 import Example_5 from '../forms/example_5/example_5.jsx';
+import Example_6 from '../forms/example_6/example_6.jsx';
 
 class Main extends Component {
     render() {
@@ -16,6 +17,7 @@ class Main extends Component {
                 <Route exact path="/example_3/" exact component={ Example_3 } />
                 <Route exact path="/example_4/" exact component={ Example_4 } />
                 <Route exact path="/example_5/" exact component={ Example_5 } />
+                <Route exact path="/example_6/" exact component={ Example_6 } />
             </main>
         )
     }
