@@ -34,7 +34,7 @@ class Navigation extends Component {
     renderListItem = (navItems) => {
         return navItems.map(({ path, text }) => {
             return (
-                <li className='navigation__item'>
+                <li className='navigation__item' key={ path }>
                     <Link to={ path }>
                         { text }
                     </Link>
