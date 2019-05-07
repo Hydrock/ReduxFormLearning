@@ -28,7 +28,11 @@ const navItems = [
         path: '/example_6/',
         text: 'Async Form Validation'
     },
-]
+    {
+        path: '/example_7/',
+        text: 'Reset Form'
+    }
+];
 
 class Navigation extends Component {
     renderListItem = (navItems) => {
